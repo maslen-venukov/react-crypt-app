@@ -1,0 +1,71 @@
+@import 'normalize'
+@import 'reset'
+@import 'global'
+
+.logo
+  font-size: 2rem
+  margin: 0 0 1rem
+  &__link
+    display: flex
+    align-items: center
+  &__icon
+    width: 3rem
+    height: 3rem
+    margin-right: .5rem
+
+.nav
+  &__item
+    &:not(:last-child)
+      margin-bottom: .5rem
+  &__link
+    display: block
+    line-height: 3rem
+    font-weight: 700
+    border-radius: .5rem
+    padding: 0 1rem
+    transition: background-color .2s
+    &:hover,
+    &.active
+      background-color: $accent
+    &:active
+      background-color: darken($accent, 5%)
+
+.encrypt
+  &__result
+    max-width: 50rem
+    overflow-wrap: break-word
+    margin-top: 1rem
+
+.decrypt
+  &__result
+    margin-top: 1rem
+
+.form
+  &__label
+    display: flex
+    flex-direction: column
+    margin-bottom: 1rem
+  &__text
+    margin-bottom: .5rem
+  &__input
+    line-height: 2.4rem
+    color: $light
+    border-radius: .5rem
+    padding: 0 .5rem
+    background-color: transparent
+    border: 1px solid $accent
+    box-shadow: 0 3px 15px rgba($accent, .25)
+    transition: box-shadow .2s
+    &:focus
+      box-shadow: 0 3px 15px rgba($accent, .5)
+  &__btn
+    line-height: 2.4rem
+    color: $light
+    padding: 0 .5rem
+    border-radius: .5rem
+    background-color: $accent
+    transition: box-shadow .2s, background-color .2s
+    &:hover
+      box-shadow: 0 3px 15px rgba($accent, .5)
+    &:active
+      background-color: darken($accent, 5%)
